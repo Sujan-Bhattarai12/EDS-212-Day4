@@ -32,3 +32,18 @@ Matrix multiplication
 ```{r}
 matrix %*% matrixA
 ```
+
+**Leslie Matrix in R programming**
+
+```{r}
+leslie_matrix    <- matrix(c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0), nrow=3, byrow=TRUE)
+initial_condition_year2000  <- c(rnorm(3, 10, 10))
+second_condition_year2001   <- initial_condition_year2000
+
+Leslie_output <- leslie_matrix %*% initial_condition_year2000
+leslie_output1 <- leslie_matrix %*% Leslie_output
+
+data <- data.frame(x=Leslie_output, y=leslie_output1)
+
+plot(data)
+```
