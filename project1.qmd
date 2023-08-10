@@ -20,3 +20,15 @@ values <- seq(from = 1, to = 50, length = 9)
 ```{r}
 matrix <- matrix(values, nrow=3, ncol = 3, byrow = TRUE)
 ```
+
+```{r}
+matrixA <- matrix(seq(from=1, to= 30, length = 6),
+                  nrow=3, ncol=2,
+                  byrow=F)
+```
+
+Matrix multiplication
+
+```{r}
+matrix %*% matrixA
+```
