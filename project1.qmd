@@ -8,5 +8,15 @@ editor: visual
 
 ```{r}
 rain        <- c(10, 6, 7, 20L)
-scaled_Rain <- 5*rain
+scaled_Rain <- 5 * rain
+```
+
+## **Make matrix**
+
+```{r}
+values <- seq(from = 1, to = 50, length = 9)
+```
+
+```{r}
+matrix <- matrix(values, nrow=3, ncol = 3, byrow = TRUE)
 ```
